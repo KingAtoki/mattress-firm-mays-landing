@@ -6,21 +6,59 @@ import {
   Dimensions,
   Image,
   ScrollView,
-  TouchableWithoutFeedback
+  TouchableWithoutFeedback,
+  Button
 } from 'react-native';
 
 let { height, width } = Dimensions.get('window');
 
-export default class FrontPageComponent extends Component {
+export default class ShopComponent extends Component {
+  static navigationOptions = ({ navigation }) => {
+    const { params = {} } = navigation.state;
+    return {
+      drawerLabel: 'Shop',
+      headerLeft: (
+        <TouchableWithoutFeedback
+          style={{
+            height: height * 0.05,
+            width: height * 0.05,
+            marginLeft: 10
+          }}
+          onPress={() => params.openMenu()}
+        >
+          <Image
+            style={{
+              height: height * 0.05,
+              width: height * 0.05,
+              marginLeft: 10
+            }}
+            source={require('../../assets/menu.png')}
+          />
+        </TouchableWithoutFeedback>
+      )
+    };
+  };
   constructor() {
     super();
     this.state = {};
   }
+
+  componentDidMount() {
+    this.props.navigation.setParams({
+      openMenu: this.openMenu
+    });
+  }
+
+  openMenu = () => {
+    this.props.navigation.navigate('DrawerOpen');
+  };
   render() {
     return (
       <View style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <TouchableWithoutFeedback onPress={() => console.log('pressed')}>
+          <TouchableWithoutFeedback
+            onPress={() => this.props.navigation.navigate('Mattresses')}
+          >
             <View style={styles.imageView}>
               <Image
                 style={styles.mainImage}
