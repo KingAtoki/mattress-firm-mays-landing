@@ -67,7 +67,7 @@ export default class ShopComponent extends Component {
               />
             </View>
           </TouchableWithoutFeedback>
-          <TouchableWithoutFeedback onPress={() => console.log('pressed')}>
+          <TouchableWithoutFeedback onPress={() => console.log('pillows pressed')}>
             <View style={styles.imageView}>
               <Image
                 style={styles.mainImage}
@@ -76,7 +76,7 @@ export default class ShopComponent extends Component {
               />
             </View>
           </TouchableWithoutFeedback>
-          <TouchableWithoutFeedback onPress={() => console.log('pressed')}>
+          <TouchableWithoutFeedback onPress={() => console.log('adjustable pressed')}>
             <View style={styles.imageView}>
               <Image
                 style={styles.mainImage}
@@ -85,7 +85,7 @@ export default class ShopComponent extends Component {
               />
             </View>
           </TouchableWithoutFeedback>
-          <TouchableWithoutFeedback onPress={() => console.log('pressed')}>
+          <TouchableWithoutFeedback onPress={() => console.log('bed pressed')}>
             <View style={styles.imageView}>
               <Image
                 style={styles.mainImage}
@@ -94,7 +94,7 @@ export default class ShopComponent extends Component {
               />
             </View>
           </TouchableWithoutFeedback>
-          <TouchableWithoutFeedback onPress={() => console.log('pressed')}>
+          <TouchableWithoutFeedback onPress={() => console.log('sheets pressed')}>
             <View style={styles.imageView}>
               <Image
                 style={styles.mainImage}
